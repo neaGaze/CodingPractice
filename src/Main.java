@@ -1,9 +1,10 @@
 import solutions.arrayandstring.*;
+import solutions.linkedlist.LinkedLIst;
 
 public class Main {
 
     public static void main(String[] args) {
-        BaseClass algo = new OneAway();
+        LinkedLIst algo = new LinkedLIst();
         algo.test();
     }
 }
