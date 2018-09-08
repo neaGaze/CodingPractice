@@ -7,7 +7,7 @@ import solutions.arrayandstring.BaseClass;
  */
 public class LinkedLIst extends BaseClass {
 
-    private class Node {
+    public static class Node {
 
         private Node next;
         private int data;
@@ -85,6 +85,16 @@ public class LinkedLIst extends BaseClass {
         return data;
     }
 
+    public int getLength() {
+        int count = 0;
+        Node node = getHead();
+        while(node != null) {
+            count++;
+            node = node.getNext();
+        }
+        return count;
+    }
+
     public void print(String str) {
         System.out.println(str);
         Node node = this.getHead();
@@ -100,6 +110,24 @@ public class LinkedLIst extends BaseClass {
             System.out.println(node.getData());
         }
 
+    }
+
+    public void printList() {
+        Node node = this.getHead();
+        if(node == null) {
+            System.out.println("Empty LinkedList");
+            return;
+        }
+
+        StringBuilder strb = new StringBuilder();
+        while(node != null) {
+            strb.append(node.getData());
+            if(node.getNext() != null)
+                strb.append(" -> ");
+
+            node = node.getNext();
+        }
+        System.out.println(strb.toString());
     }
 
     @Override
