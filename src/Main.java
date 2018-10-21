@@ -16,7 +16,7 @@ public class Main {
         //Intersection algo = new Intersection();
         //algo.test();
         //StackWithMin.test();
-        RobotInAGrid.test();
+        RotatedArraySort.test();
     }
 
     public static boolean createRansomNote(String str) {
