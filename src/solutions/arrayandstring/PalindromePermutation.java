@@ -71,4 +71,14 @@ public class PalindromePermutation extends BaseClass {
     public void setStr(String str) {
         this.str = str;
     }
+    public boolean palindromeRearranging(String inputString) {
+        int finalVal = 0;
+        for(char c : inputString.toCharArray()) {
+            int intValue = c - 'a';
+            finalVal = finalVal ^ (1 << intValue);
+        }
+        if(finalVal == 0 || ((finalVal - 1 & finalVal) == 0)) return true;
+        return false;
+    }
+
 }
